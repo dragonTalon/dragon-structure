@@ -32,3 +32,5 @@
   - ####    [原型模式](https://github.com/GiftedDrogon/dragon-structure/blob/b598aa91d8c311422af595261cd3daa0ba6eea49/factory-structure/src/main/java/com/dragon/talon/structure/prototype/PrototypePattern.java)   
   
   - ####    [模版模式]()
+   
+   - ####    [代理模式]()
