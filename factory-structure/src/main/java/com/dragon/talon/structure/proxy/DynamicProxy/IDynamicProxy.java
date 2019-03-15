@@ -1,5 +1,11 @@
 package com.dragon.talon.structure.proxy.DynamicProxy;
 
+import sun.misc.ProxyGenerator;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 /**
  * 动态代理
  * 
@@ -29,5 +35,27 @@ public interface IDynamicProxy {
         proxyObj.login("talon");
         proxyObj.kill();
         proxyObj.upgrade();
+        final Object instance = ProxyFactory.newInstance(proxy.getClass().getInterfaces(), proxy);
+        String path = "proxyDemo.class";
+        final byte[] bytes = ProxyGenerator.generateProxyClass("$Proxy0", proxy.getClass().getInterfaces());
+        FileOutputStream out  = null;
+        try {
+            out = new FileOutputStream(path);
+            out.write(bytes);
+            out.flush();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            if (out != null){
+                try {
+                    out.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 }
+
