@@ -5,6 +5,7 @@
  预计写 24中常用设计模式
  
         在每个模式的关键类中含有解释
+### 创建型模式 
  
  -  #### 工厂模式：
     
@@ -32,7 +33,7 @@
   - ####    [原型模式](https://github.com/GiftedDrogon/dragon-structure/blob/b598aa91d8c311422af595261cd3daa0ba6eea49/factory-structure/src/main/java/com/dragon/talon/structure/prototype/PrototypePattern.java)   
   
   - ####    [模版模式]()
-   
+### 结构模式
   - ####    [代理模式]()
   
   - ####    [适配器模式]()
